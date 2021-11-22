@@ -2,80 +2,98 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
-  //Implementando uma lojinha
 
-  String nome = "Lojinha do Dart";
-  int bananas = 5;
-  double preco = 10.50;
-  bool temBananas = true;
+  print('Olá Mundo');
 
-  bananas = 10;
+  //Variáveis Básicas
 
-  print("O nome da lojinha é " + nome);
-  print("A $nome tem $bananas bananas");
+  int idade = 20;
+  String nome = "Luan de Souza";
+  double distancia = 24.89;
 
-  var teste = 1;
-  print(teste);
+  print(idade);
+  print(nome);
+  print(distancia);
 
-  dynamic teste2 = 1;
-  print(teste2);
+  idade = 21;
+  print(idade);
 
-  //operações aritméticas
+  //Operadores Aritméticos
 
-  double num1 = 10.0;
-  double num2 = 20.0;
+  double n1 = 10.5;
+  double n2 = 47.9;
+  int n3 = 32;
 
-  double result = (num1 * num2) - 5.0;
-  print(result);
+  double r1 = n1 * (n2 / n3) + 10;
+  print(r1);
 
-  num1 *= 15;
-  num1--;
-  print(num1);
+  //n1 = n1 + 10;
+  n1 += 10;
+  print(n1);
 
-  //operadores lógicos
+  n3++;
+  print(n3);
 
-  // Comparadores
-  // ----------------------
-  // >		maior
-  // >=		maior ou igual
-  // <		menor
-  // <=		menor ou igual
-  // ==		igual
-  // !=		diferente
+  int r2 = n3 % 5;
+  print(r2);
 
-  bool testeComp = (10 != 20);
+  //Tomando decisões
 
-  print("COMP: $testeComp");
+  int idade2  = 20;
 
-  // Operador OR
-  // ----------------------
-  // true		true 	-> true
-  // true		false -> true
-  // false	true 	-> true
-  // false	false -> false
+  if(idade >= 18){
+    print("Você é maior de idade");
+  }else{
+    print("Você é menor de idade");
+  }
 
-  bool testeOr = (true || false);
+  //Operadores lógicos
 
-  print("OR: $testeOr");
+  int number1 = 2;
+  int number2 = 2;
 
-  // Operador AND
-  // ----------------------
-  // true		true 	-> true
-  // true		false -> false
-  // false	true 	-> false
-  // false	false -> false
+  bool resultado = number1 <= number2 && number1 >= 10;
 
-  bool testeAnd = (true && false);
+  // == igual
+  // != diferente
+  // >  maior
+  // <  menor
+  // >= maior ou igual
+  // <= menor ou igual
 
-  print("AND: $testeAnd");
+  // && e(and)
+  // || ou(or)
+  // ! negação(not)
 
-  bool complexa = !(10 > 20) && ((30 < 20) || testeAnd);
+  print(resultado);
 
-  print(complexa);
+  //if/else
 
-  //Intermediario
+  double nota = 8;
+  double exame = 8;
 
-  
+  /*if(nota >= 6){
+    print("Aprovado");
+  }else if(nota >= 4){
+    print("Exame");
+      if(exame >= 6){
+        print("Aprovado no exame");
+      }else{
+        print("Reprovado no exame");
+      }
+  }else{
+    print("Reprovado");
+  }*/
+
+  if(nota >= 6){
+    print("Aprovado");
+  }else if(nota >= 3.5 && exame >=6){
+    print("Aprovado no exame");
+  }else if(nota >= 3.5){
+    print("Reprovado no exame");
+  }else{
+    print("Reprovado");
+  }
 }
 
 class MyApp extends StatelessWidget {
