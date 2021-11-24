@@ -94,6 +94,66 @@ void main() {
   }else{
     print("Reprovado");
   }
+
+  //Operador Ternário
+  double nota1 = 8;
+  String mensagem = nota >= 5 ? "Aprovado" : "Reprovado";
+
+  int numero = nota1 == 5 && nota1 != 7 ? 10 : 5;
+
+  print(mensagem);
+  print(numero);
+
+  //Switch
+
+  String linguagem = "Dart";
+
+  switch(linguagem){
+    case "Dart":
+      print("Melhor linguagem");
+      break;
+    case "C":
+      print("Linguagem complicada");
+      break;
+    case "Swift":
+      print("Linguagem complicada também");
+      break;
+    default:
+      print("Linguagem desconhecida");
+  }
+
+  int number = 10;
+
+  switch(number){
+    case 10:
+      print("Seu número é 10");
+      break;
+    case 20:
+      print("Seu número é 20");
+      break;
+  }
+
+  //While loop
+
+  int i = 0;
+  int j = 10;
+
+  while(i < 10 && j > 0){
+    print(i);
+    i++;
+    print(j);
+    j--;
+  }
+
+  //Do while loop
+
+  int a = 10;
+
+  do{
+    //O Do While verifica primeiro antes de entrar no loop
+    print("Olá Mundo");
+    i++;
+  }while(a <= 20);
 }
 
 class MyApp extends StatelessWidget {
